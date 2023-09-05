@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 18:14:49 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/04 18:22:10 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/05 14:17:43 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 15:37:38 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+//#include <stdio.h>
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t		i;
+	const char	*srcptr;
+	char		*destptr;
 
 	i = 0;
+	srcptr = src;
+	destptr = dest;
 	while (i < n)
 	{
-		s[i] = c;
+		destptr[i] = srcptr[i];
 		i++;
 	}
-	return (*s);
+	return (destptr);
 }
+/*
+int	main(void)
+{
+	char	str[] = "SrcString";
+	char	str2[] = "DestString";
+	printf("%s, %s\n", str, str2);
+	ft_memcpy(str2, str, 3);
+	printf("%s", str2);
+}
+*/
