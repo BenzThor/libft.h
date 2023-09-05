@@ -1,49 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 15:30:13 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 16:32:44 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/05 14:07:29 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 18:43:04 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //#include <stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	bzero(void *s, size_t n)
 {
-	size_t		i;
-	char		*destptr;
-	const char	*srcptr;
+	size_t	i;
+	char	*ptr;
 
 	i = 0;
-	destptr = dest;
-	srcptr = src;
-	if (srcptr < destptr)
+	ptr = s;
+	while (i < n)
 	{
-		while (n--)
-			destptr[n] = srcptr[n];
+		ptr[i] = 0;
+		i++;
 	}
-	else
-	{
-		while (i < n)
-		{
-			destptr[i] = srcptr[i];
-			i++;
-		}
-	}
-	return (destptr);
 }
 /*
 int	main(void)
 {
-	char	str[] ="Was mache ich hier?";
-	char	*strptr = &str[6];
-	printf("%s, %s\n", str, strptr);
-	ft_memmove(str, strptr, 6);
-	printf("%s\n", str);
+	char	str[] = "Was machst du?";
+    bzero(str, 8);
+    printf("%s\n", str + 7);
+	printf("%s", str + 8);
+    return 0;
 }
 */

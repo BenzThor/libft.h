@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 17:59:32 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/04 18:02:45 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/04 17:17:44 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 18:44:02 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+//#include <stdio.h>
 
-int	ft_isprint(int c)
+int	ft_isascii(int c)
 {
-	if (c > 31 && c < 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
+/*int	main(void)
+{
+	if (ft_isascii(128) == 1)
+		printf("Working well");
+	else
+		printf("Something went wrong");
+}
+*/

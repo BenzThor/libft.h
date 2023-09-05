@@ -1,30 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 18:04:08 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/04 18:11:27 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/05 15:30:13 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 18:44:50 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t		i;
+	char		*destptr;
+	const char	*srcptr;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	destptr = dest;
+	srcptr = src;
+	if (srcptr < destptr)
+	{
+		while (n--)
+			destptr[n] = srcptr[n];
+	}
+	else
+	{
+		while (i < n)
+		{
+			destptr[i] = srcptr[i];
+			i++;
+		}
+	}
+	return (destptr);
 }
 /*
 int	main(void)
 {
-	printf("The length of the string is %zu", ft_strlen("Was soll das?"));
+	char	str[] ="Was mache ich hier?";
+	char	*strptr = &str[6];
+	printf("%s, %s\n", str, strptr);
+	ft_memmove(str, strptr, 6);
+	printf("%s\n", str);
 }
 */

@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:19:45 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/04 17:52:32 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/04 18:14:49 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 18:44:58 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //#include <stdio.h>
 
-int	ft_isalpha(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if ((c > 63 && c < 91) || (c > 96 && c < 123))
-		return (1);
-	return (0);
-}
+	size_t	i;
+	char	*ptr;
 
-/*int	main(void)
+	ptr = s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = c;
+		i++;
+	}
+	return (ptr);
+}
+/*
+int	main(void)
 {
-	if (ft_isalpha(75) == 1)
-		printf("Working well");
-	else
-		printf("Something went wrong");
+	char str[] = "Was machst du?";
+    ft_memset(str, 88, 8);
+    printf("%s", str);
+    return 0;
 }
 */

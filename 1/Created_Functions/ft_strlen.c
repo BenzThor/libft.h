@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 14:07:29 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 14:16:27 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/04 18:04:08 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/05 18:45:10 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //#include <stdio.h>
 
-void	bzero(void *s, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	size_t	i;
-	char	*ptr;
+	int	i;
 
 	i = 0;
-	ptr = s;
-	while (i < n)
-	{
-		ptr[i] = 0;
+	while (s[i] != '\0')
 		i++;
-	}
+	return (i);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Was machst du?";
-    bzero(str, 8);
-    printf("%s\n", str + 7);
-	printf("%s", str + 8);
-    return 0;
+	printf("The length of the string is %zu", ft_strlen("Was soll das?"));
 }
 */
