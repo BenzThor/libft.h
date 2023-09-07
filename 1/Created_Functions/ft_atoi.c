@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 12:02:54 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/07 11:40:54 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 12:01:47 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_atoi(const char *nptr)
 {
-	char	*l;
-	char	*b;
-	int		i;
-	int		j;
+	int	sign;
+	int	sum;
 
-	b = (char *)big;
-	l = (char *)little;
-	if (*l == '\0')
-		return (b);
-	while (len && *b != '\0')
+	sign = 1;
+	while (*nptr < 33)
+		nptr++;
+	if (*nptr == 43 || *nptr == 45)
 	{
-		i = 0;
-		while (b[i] == l[i] && b[i] != '\0')
-		{
-			if (l[i] == '\0')
-				return (b);
-			i++;
-		}
-		b++;
-		len--;
+		if (*nptr == 45)
+			sign *= -1;
+		nptr++;
 	}
-	return (NULL);
+	sum = 0;
+	while (*nptr > 47 && *nptr < 58)
+	{
+		sum *= 10;
+		sum += (*nptr - '0');
+		nptr++;
+	}
+	return (sum * sign);
 }
-
+/*
 int	main(void)
 {
-	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
-	char	*s2 = "was";
-
-	printf("%s", ft_strnstr(s1, s2, 100));
+	char	*str = "    1sfd";
+	printf("%d", ft_atoi(str));
 }
+ */
