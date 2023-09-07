@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 12:02:54 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/07 12:28:12 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,26 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*l;
-	char	*b;
 	int		i;
-	int		j;
 
-	b = (char *)big;
-	l = (char *)little;
-	if (*l == '\0')
-		return (b);
-	while (len && *b != '\0')
+
+	if (*little == '\0')
+		return ((char *)big);
+	while (len && *big != '\0')
 	{
 		i = 0;
-		while (b[i] == l[i] && b[i] != '\0')
+		while (big[i] == little[i] && big[i] != '\0')
 		{
-			if (l[i] == '\0')
-				return (b);
+			if (little[i + 1] == '\0')
+				return ((char *)big);
 			i++;
 		}
-		b++;
+		big++;
 		len--;
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
@@ -45,3 +41,4 @@ int	main(void)
 
 	printf("%s", ft_strnstr(s1, s2, 100));
 }
+ */
