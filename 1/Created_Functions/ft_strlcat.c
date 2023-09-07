@@ -6,34 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:21:51 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/06 18:04:09 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/07 15:42:35 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlcat(char *dst, const char *src, size_t size)
-// {
-// 	size_t		i;
-// 	size_t		j;
-// 	size_t		slen;
-// 	size_t		dlen;
-
-// 	j = 0;
-// 	i = ft_strlen(dst);
-// 	dlen = i;
-// 	slen = ft_strlen(src);
-// 	if (size == 0 || size <= dlen)
-// 		return (slen + size);
-// 	while (src[j] != '\0' && j < (size - dlen - 1))
-// 	{
-// 		dst[i] = src[j];
-// 		i++;
-// 		j++;
-// 	}
-// 	dst[i] = '\0';
-// 	return (dlen + slen);
-// }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -54,17 +31,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 		i++;
 	}
-	dst[i] = '\0';
+	dst[j] = '\0';
 	return (src_len + dst_len);
 }
-
+/*
 int	main(void)
 {
-	char	src[] = "wasasdf";
-	char	dest[] = "asdfasdfasd";
+	char	src[] = "machst du";
+	char	dest[30] = "Was ";
 
-	printf("%ld\n", ft_strlcat(dest, src, 30));
+	printf("%ld\n", ft_strlcat(dest, src, 100));
 	printf("%s", dest);
 
 	return (0);
-}
+} */
