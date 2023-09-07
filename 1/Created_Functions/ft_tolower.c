@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 16:31:30 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:27:11 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/06 18:19:02 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/06 18:30:50 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-size_t strlcpy(char *dst, const char *src, size_t size)
+int	ft_tolower(int c)
 {
-	size_t	srcsz;
-
-	srcsz = 
-
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }
+/*
+int	main(void)
+{
+	char	c = '[';
+	printf("%c in lowercase %c", c, ft_tolower(c));
+}
+ */

@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:35:23 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/06 15:48:26 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/06 19:13:48 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 08:54:16 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c > 47 && c < 58)
-		return (1);
-	return (0);
+	char	*focc;
+
+	focc = (char *)s;
+	while (*focc)
+		focc++;
+	while (*focc != (char)c && focc > s)
+		focc--;
+	if (*focc == (char)c)
+		return (focc);
+	return (NULL);
 }
 
-/*
-int	main(void)
+/* int	main(void)
 {
-	if (ft_isdigit(50) == 1)
-		printf("Working well");
-	else
-		printf("Something went wrong");
-}
-*/
+	char	*str1;
+
+	str1 = "Was machst dum da?";
+	printf("%s 213421", ft_strrchr(str1, 'd' + 256));
+} */

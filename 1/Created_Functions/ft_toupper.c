@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:35:23 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/06 15:48:26 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/06 18:09:35 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/06 18:18:35 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_toupper(int c)
 {
-	if (c > 47 && c < 58)
-		return (1);
-	return (0);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	return (c);
 }
-
 /*
 int	main(void)
 {
-	if (ft_isdigit(50) == 1)
-		printf("Working well");
-	else
-		printf("Something went wrong");
+	char	c = 'g';
+	printf("%c in uppercase %c", c, ft_toupper(c));
 }
 */

@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:17:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:44:02 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/06 15:48:11 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

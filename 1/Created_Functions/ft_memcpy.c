@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:17:43 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:44:42 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/06 15:48:41 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

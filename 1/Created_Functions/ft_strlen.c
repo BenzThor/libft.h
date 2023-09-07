@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 18:04:08 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:45:10 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/06 16:22:01 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

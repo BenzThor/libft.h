@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:07:29 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:43:04 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/06 15:47:13 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+#include "libft.h"
 
 void	bzero(void *s, size_t n)
 {
