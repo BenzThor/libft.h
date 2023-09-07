@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 14:31:08 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/07 14:13:44 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 14:30:32 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*strdup(const char *s)
 {
-	int		i;
+	int		len;
+	char	*ptr;
 
-	if (*little == '\0')
-		return ((char *)big);
-	while (len && *big != '\0')
-	{
-		i = 0;
-		while (big[i] == little[i] && big[i] != '\0')
-		{
-			if (little[i + 1] == '\0')
-				return ((char *)big);
-			i++;
-		}
-		big++;
-		len--;
-	}
-	return (NULL);
+	len = ft_strlen(s);
+	ptr = malloc(len);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memcpy(ptr, s, len);
+	return (ptr);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
-	char	*s2 = "was";
-
-	printf("%s", ft_strnstr(s1, s2, 100));
+	printf("%s", strdup("Passt alles?"));
 }
  */

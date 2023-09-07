@@ -6,13 +6,13 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:31:30 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/06 16:21:57 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/07 14:26:57 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len;
@@ -33,7 +33,7 @@ int	main(void)
 {
     size_t n;
     char str[] = "Was mache ich hier?";
-    n = strlcpy(str, "Was mache ich hier?", 4);
+    n = ft_strlcpy(str, "Was mache ich hier?", 4);
     printf("%s, %zu\n", str, n);
     return (0);
 }
