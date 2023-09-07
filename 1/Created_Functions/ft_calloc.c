@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset (copy).c                                    :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 18:14:49 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/05 14:04:39 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/07 12:35:17 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 14:06:40 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	s = *(char*)s;
+	void	*allspc;
+	size_t	total_size;
 
-	i = 0;
-	while (i < n)
-	{
-		s[i] = c;
-		i++;
-	}
-	return (s);
+	total_size = nmemb * size;
+	if (nmemb != 0 && size != 0 && nmemb > (total_size / size))
+		return (NULL);
+	allspc = malloc(total_size);
+	if (allspc == NULL)
+		return (NULL);
+	ft_bzero(allspc, total_size);
+	return (allspc);
 }
-
+/*
 int	main(void)
 {
-	char str[] = "Was machst du?";
-    memset(str, 88, 8);
-    printf("%s", str);
-    return 0;
+	printf("%p", ft_calloc(0, 0));
 }
+ */

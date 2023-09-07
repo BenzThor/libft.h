@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:30:19 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 09:17:48 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/07 13:55:37 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <stdlib.h>
 
 # include <stdio.h>
 
 size_t	ft_strlen(const char *s);
 size_t	strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
