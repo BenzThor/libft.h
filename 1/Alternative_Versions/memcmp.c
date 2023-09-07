@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 19:44:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 10:26:30 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/07 10:28:59 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 10:29:47 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	const unsigned char	*ptr1;
+	const unsigned char	*ptr2;
+
+	ptr1 = (char *)s1;
+	ptr2 = (char *)s2;
+	while (n)
 	{
-		s1++;
-		s2++;
+		if (*ptr1 != *ptr2)
+			return (*ptr1 - *ptr2);
+		ptr1++;
+		ptr2++;
 		n--;
 	}
-	return (*s1 - *s2);
+	return (0);
+
 }
-/*
+
 int	main(void)
 {
 	char	*s1 = "Wsd";
 	char	*s2 = "Wae";
 
-	printf("%d", ft_strncmp(s1, s2, 1));
-} */
+	printf("%d", ft_memcmp(s1, s2, 3));
+}

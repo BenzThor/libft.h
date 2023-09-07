@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 19:44:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 10:26:30 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/07 09:19:16 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/07 10:25:33 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	unsigned char	*chrptr;
+
+	chrptr = ( unsigned char *)s;
+	while (n && *chrptr != (char)c)
 	{
-		s1++;
-		s2++;
+		chrptr++;
 		n--;
 	}
-	return (*s1 - *s2);
+	if (*chrptr == (char)c && n > 0)
+		return (chrptr);
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	*s1 = "Wsd";
-	char	*s2 = "Wae";
+	char	*str1;
 
-	printf("%d", ft_strncmp(s1, s2, 1));
+	str1 = "Was machst dum da?";
+	printf("%p address of c: %p", ft_memchr(str1, 'a' + 256, 2), &str1[1]);
 } */
