@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:22:16 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/08 18:18:10 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/08 17:46:29 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/08 18:15:20 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
+/*
+int	main(void)
+{
+	ft_putstr_fd("Funktioniert das?", 1);
+}
+ */

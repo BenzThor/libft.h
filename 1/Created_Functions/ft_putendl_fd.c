@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:46:29 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/08 17:47:42 by tbenz            ###   ########.fr       */
+/*   Created: 2023/09/08 18:08:51 by tbenz             #+#    #+#             */
+/*   Updated: 2023/09/08 18:23:16 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
+/*
+int	main(void)
+{
+	ft_putendl_fd("Funktioniert das?", 1);
+} */
