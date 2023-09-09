@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 16:16:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/09 17:20:14 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/09 17:22:33 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		lst_elem = ft_lstnew(((*f)(lst->content)));
 		if (!lst_elem)
+		{
+			ft_lstclear(&map, del);
 			return (NULL);
+		}
 		ft_lstadd_back(&lst_elem, map);
 		lst = lst->next;
 	}
