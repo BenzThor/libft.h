@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:30:19 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/08 18:10:29 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/09 13:37:08 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,11 @@ int		ft_isalnum(int c);
 void	bzero(void *s, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+typedef struct s_list
+{
+void			*content;
+struct s_list	*next;
+}				t_list;
+t_list	*ft_lstnew(void *content);
 
 #endif
