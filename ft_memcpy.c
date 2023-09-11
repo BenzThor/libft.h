@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:17:43 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 19:45:43 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 19:47:05 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const char	*srcptr;
 	char		*destptr;
 
-	if (!dest || !src)
-		return (NULL);
 	i = 0;
 	srcptr = src;
 	destptr = dest;
