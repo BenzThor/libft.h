@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:33:12 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 18:27:44 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 18:29:27 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	char	*ptr1;
+	char	*ptr2;
 
 	ptr1 = (char *)s1;
 	ptr2 = (char *)s2;
@@ -27,7 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		ptr2++;
 		n--;
 	}
-	return (*ptr1 - *ptr2);
+	return ((unsigned char)*ptr1 -(unsigned char)*ptr2);
 }
 /*
 int	main(void)
