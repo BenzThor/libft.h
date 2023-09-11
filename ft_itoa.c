@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:46:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/08 14:08:34 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 16:46:44 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ char	*ft_itoa(int n)
 	}
 	return (str = ft_create_str(cnt, sign, n));
 }
-
+/*
 int	main(void)
 {
 	printf("%s", ft_itoa(-350));
 }
+ */
