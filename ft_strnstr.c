@@ -6,11 +6,12 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 18:36:02 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 19:37:52 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -35,12 +36,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
+
+#include <stdio.h>
 int	main(void)
 {
 	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
 	char	*s2 = "was";
 
-	printf("%s", ft_strnstr(s1, s2, 100));
+	printf("%s", ft_strnstr(s1, s2, -1));
 }
- */
