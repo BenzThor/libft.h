@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 19:37:52 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 19:48:43 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -45,3 +45,4 @@ int	main(void)
 
 	printf("%s", ft_strnstr(s1, s2, -1));
 }
+ */
