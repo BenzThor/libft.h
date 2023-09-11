@@ -6,13 +6,13 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:13:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 14:30:32 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 17:04:44 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		len;
 	char	*ptr;
