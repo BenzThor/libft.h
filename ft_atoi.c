@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 11:40:54 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/07 12:01:47 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 18:49:30 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi(const char *nptr)
 	int	sum;
 
 	sign = 1;
-	while (*nptr < 33)
+	while (*nptr == 32 || *nptr > 7 && *nptr < 14 )
 		nptr++;
 	if (*nptr == 43 || *nptr == 45)
 	{
@@ -35,10 +35,10 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sum * sign);
 }
-/*
+
+#include <stdio.h>
 int	main(void)
 {
-	char	*str = "    1sfd";
+	char	*str = "\e475";
 	printf("%d", ft_atoi(str));
 }
- */
