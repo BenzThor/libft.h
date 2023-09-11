@@ -6,13 +6,13 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:46:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 17:56:59 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/11 18:07:59 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	cnt_num(int n)
+static	size_t	cnt_num(long int n)
 {
 	size_t	cnt;
 
@@ -32,7 +32,7 @@ static	size_t	cnt_num(int n)
 	return (cnt);
 }
 
-static char	*ft_create_str(int cnt, int sign, int n)
+static char	*ft_create_str(int cnt, int sign, long int n)
 {
 	int		i;
 	char	*str;
@@ -58,22 +58,25 @@ static char	*ft_create_str(int cnt, int sign, int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	cnt;
-	size_t	sign;
-	char	*str;
+	size_t		cnt;
+	size_t		sign;
+	char		*str;
+	long int	nl;
 
+	nl = n;
 	sign = 0;
-	cnt = cnt_num(n);
-	if (n < 0)
+	cnt = cnt_num(nl);
+	if (nl < 0)
 	{
 		sign = 1;
-		n *= -1;
+		nl *= -1;
 	}
-	return (str = ft_create_str(cnt, sign, n));
+	return (str = ft_create_str(cnt, sign, nl));
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	printf("%s", ft_itoa(-350));
+	printf("%s", ft_itoa(-2147483648));
 }
  */
