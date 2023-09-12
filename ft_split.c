@@ -6,11 +6,12 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/08 12:41:01 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:08:04 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static	size_t	ft_str_count(char const *s, char c)
 {
@@ -73,15 +74,17 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	char	**arr;
+	char	**tab;
 	int		i = 0;
 	int		j = 0;
-	arr = ft_split("..Funktioniert..das.hier.?..", '.');
-	while (arr[i])
+	tab = ft_split("  tripouille  42  ", ' ');
+	while (tab[i])
 	{
-		printf("%s\n", arr[i]);
+		printf("%s\n", tab[i]);
 		i++;
 	}
-} */
+}
+ */
