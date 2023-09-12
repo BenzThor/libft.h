@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:08:04 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:09:23 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 		str_cnt = 0;
 	else
 		str_cnt = ft_str_count(s, c);
-	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
+	arr = (char **)malloc((str_cnt) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
 	ft_substr_gen(arr, s, c);
