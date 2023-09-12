@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 16:00:30 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 16:02:24 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ static	size_t	ft_str_count(char const *s, char c)
 	return (arr_cnt);
 }
 
-static void	ft_free(char **arr, int i)
+static void	ft_free(char const **arr, size_t i)
 {
 	while (i >= 0)
 		free(arr[i--]);
 	free (arr);
 }
 
-static char	**ft_arrgen(char *s, char c, char **arr)
+static char	**ft_arrgen(char const *s, char c, char **arr)
 {
 	size_t	i;
 	size_t	len;
@@ -56,7 +56,7 @@ static char	**ft_arrgen(char *s, char c, char **arr)
 			arr[i++] = ft_substr(s - len, 0, len);
 			if (arr[i - 1] == NULL)
 			{
-				ft_free(arr);
+				ft_free(arr, i);
 				return (NULL);
 			}
 		}
