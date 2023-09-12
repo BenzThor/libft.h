@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:37:57 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 10:16:11 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 10:16:56 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
-	int		strlen;
+	size_t	strlen;
 
 	strlen = ft_strlen(s);
 	if ((strlen + 1) < len)
