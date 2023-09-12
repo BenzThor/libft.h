@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:14:02 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:17:34 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static	size_t	ft_str_count(char const *s, char c)
 {
 	size_t	arr_cnt;
 
-	arr_cnt = 1;
+	arr_cnt = 0;
 	while (*s == c)
 		s++;
 	while (*s)
@@ -64,10 +64,10 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	if (!*s)
-		return (NULL);
+		str_cnt = 0;
 	else
 		str_cnt = ft_str_count(s, c);
-	arr = (char **)malloc((str_cnt) * sizeof(char *));
+	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
 	ft_substr_gen(arr, s, c);
@@ -86,4 +86,5 @@ int	main(void)
 		printf("%s\n", tab[i]);
 		i++;
 	}
-} */
+}
+ */
