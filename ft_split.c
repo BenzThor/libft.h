@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 16:03:59 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 16:05:07 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ static char	**ft_arrgen(char const *s, char c, char **arr)
 			s++;
 	}
 	arr[i] = NULL;
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
