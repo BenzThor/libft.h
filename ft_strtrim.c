@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:50:13 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 15:51:47 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 17:31:01 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*ptr;
 
-	if (!s1 || !set)
+	if (!s1 || !set || !s)
 		return (0);
 	start = 0;
 	end = ft_strlen(s1) - 1;
