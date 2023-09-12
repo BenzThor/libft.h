@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 13:54:35 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 15:25:54 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,33 @@ static	void	ft_substr_gen(char **arr, char const *s, char c)
 	arr[arr_cnt] = NULL;
 }
  */
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	len;
 	size_t	i;
+	size_t	str_cnt;
 	char	**arr;
 
-	arr = (char **)malloc((ft_str_count(s, c)+ 1) * sizeof(char *));
+	if (!s)
+		return (0);
+	arr = (char **)malloc((ft_str_count(s, c) + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
 	i = 0;
 	while (*s)
 	{
-		len = 0;
-		while (*s != c && *s && len++)
+		if (*s != c && *s)
+		{
+			len = 0;
+			while (*s != c && *s && ++len)
+				s++;
+			arr[i++] = ft_substr(s - len, 0, len);
+		}
+		if (*s)
 			s++;
-		arr[i++] = ft_substr(s - len, 0, len);
 	}
+	arr[i] = NULL;
 	return (arr);
 }
 /*
@@ -82,9 +92,16 @@ int	main(void)
 {
 	char	**tab;
 	int		i = 0;
-	tab = ft_split(0 , 0);
-	//  printf("%p\n", tab);
-	if (tab[0] == NULL)
-		printf("Is NULL");
+	int		j = 0;
+	tab = ft_split("wa sf sfd dsf" , ' ');
+
+	printf("%s", tab[3]);
+	if (tab[4] == NULL)
+		printf("234");
+	// while (tab[i])
+	// {
+	// 	printf("%s", tab[i]);
+	// 	i++;
+	// }
 }
  */
