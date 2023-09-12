@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:46:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 16:26:02 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 16:26:40 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,10 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (str);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
 	printf("%s", ft_itoa(-2147483648));
 }
+ */
