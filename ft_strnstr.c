@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 09:57:53 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 09:58:54 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 int	main(void)
 {
-/* 	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
-	char	*s2 = "was"; */
+	char	*s1 = "Wsdf asdf dsjdsl was sadfsd";
+	char	*s2 = "was";
 	char haystack[30] = "aaabcabcd";
 	char needle[10] = "aabc";
 
