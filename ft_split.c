@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:49:32 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:56:54 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	size_t	str_cnt;
 	char	**arr;
 
-	if (!*s)
+	if (!*s || !c)
 		str_cnt = 0;
 	else
 		str_cnt = ft_str_count(s, c);
@@ -72,18 +72,17 @@ char	**ft_split(char const *s, char c)
 	ft_substr_gen(arr, s, c);
 	return (arr);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
 	char	**tab;
 	int		i = 0;
 	int		j = 0;
-	tab = ft_split(" Tripouille ", ' ');
+	tab = ft_split("tripouille", 0);
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
 		i++;
 	}
 }
- */
