@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:38:26 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:49:32 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static	size_t	ft_str_count(char const *s, char c)
 
 static	void	ft_substr_gen(char **arr, char const *s, char c)
 {
-	size_t	i;
-	size_t	arrlen;
-	size_t	arr_cnt;
+	unsigned int	i;
+	size_t			arrlen;
+	size_t			arr_cnt;
 
 	i = 0;
 	arr_cnt = 0;
@@ -66,7 +66,6 @@ char	**ft_split(char const *s, char c)
 		str_cnt = 0;
 	else
 		str_cnt = ft_str_count(s, c);
-	printf("%zu", str_cnt);
 	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
@@ -80,7 +79,7 @@ int	main(void)
 	char	**tab;
 	int		i = 0;
 	int		j = 0;
-	tab = ft_split("chinimala", ' ');
+	tab = ft_split(" Tripouille ", ' ');
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
