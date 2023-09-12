@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 13:33:25 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 13:52:59 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,25 +59,20 @@ static	void	ft_substr_gen(char **arr, char const *s, char c)
  */
 char	**ft_split(char const *s, char c)
 {
-	size_t	str_cnt;
 	size_t	len;
+	size_t	i;
 	char	**arr;
 
-	str_cnt = ft_str_count(s, c);
-	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
+	arr = (char **)malloc((ft_str_count(s, c)+ 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
+	i = 0;
 	while (*s)
 	{
-		while (*s == c && *s)
-			s++;
 		len = 0;
-		while (*s != c && *s)
-		{
-			len++;
+		while (*s != c && *s && len++)
 			s++;
-		}
-		ft_substr(arr, s - len, len);
+		ft_substr(s - len, 0, len);
 	}
 	return (arr);
 }
