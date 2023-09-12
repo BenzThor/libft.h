@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 15:28:25 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 15:57:02 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,43 +32,19 @@ static	size_t	ft_str_count(char const *s, char c)
 	}
 	return (arr_cnt);
 }
-/*
-static	void	ft_substr_gen(char **arr, char const *s, char c)
-{
-	unsigned int	i;
-	size_t			arrlen;
-	size_t			arr_cnt;
 
-	i = 0;
-	arr_cnt = 0;
-	while (*s == c)
-		s++;
-	while (s[i] != '\0')
-	{
-		arrlen = 0;
-		while (s[i + arrlen] != c && s[i + arrlen] != '\0')
-			arrlen++;
-		arr[arr_cnt] = ft_substr(s, i, arrlen);
-		while (s[i + arrlen] == c && s[i + arrlen] != '\0')
-			arrlen++;
-		i += arrlen;
-		arr_cnt++;
-	}
-	arr[arr_cnt] = NULL;
+static void	ft_free(char **arr, int i)
+{
+	while (i >= 0)
+		free(arr[i--];
+	free (arr);
 }
- */
 
-char	**ft_split(char const *s, char c)
+static char	**ft_arrgen(char *s, char c, char arr**)
 {
-	size_t	len;
 	size_t	i;
-	char	**arr;
+	size_t	len;
 
-	if (!s)
-		return (0);
-	arr = (char **)malloc((ft_str_count(s, c) + 1) * sizeof(char *));
-	if (!arr)
-		return (NULL);
 	i = 0;
 	while (*s)
 	{
@@ -78,11 +54,30 @@ char	**ft_split(char const *s, char c)
 			while (*s != c && *s && ++len)
 				s++;
 			arr[i++] = ft_substr(s - len, 0, len);
+			if (arr[i - 1] == NULL)
+			{
+				ft_free(arr);
+				return (NULL);
+			}
 		}
 		if (*s)
 			s++;
 	}
 	arr[i] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	if (!s)
+		return (0);
+	arr = (char **)malloc((ft_str_count(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	arr = ft_arrgen(s, c, arr);
+	if(!arr)
+		return (NULL);
 	return (arr);
 }
 /*
