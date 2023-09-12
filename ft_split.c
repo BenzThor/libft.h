@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:18:55 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:20:15 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	if (!*s)
-		return (NULL);
+		str_cnt = 0;
 	else
 		str_cnt = ft_str_count(s, c);
 	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
