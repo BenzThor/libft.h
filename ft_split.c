@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 15:59:30 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 16:00:30 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	ft_free(char **arr, int i)
 	free (arr);
 }
 
-static char	**ft_arrgen(char *s, char c, char arr**)
+static char	**ft_arrgen(char *s, char c, char **arr)
 {
 	size_t	i;
 	size_t	len;
