@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 12:03:12 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 12:12:35 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,9 @@ char	**ft_split(char const *s, char c)
 	size_t	str_cnt;
 	char	**arr;
 
-	if (!*s || !c)
-		str_cnt = 0;
-	else
-		str_cnt = ft_str_count(s, c);
+	if (!s)
+		return (0);
+	str_cnt = ft_str_count(s, c);
 	arr = (char **)malloc((str_cnt + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
@@ -79,7 +78,7 @@ int	main(void)
 	char	**tab;
 	int		i = 0;
 	int		j = 0;
-	tab = ft_split("tripouille", 0);
+	tab = ft_split(0 , 0);
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
