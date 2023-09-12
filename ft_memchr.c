@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 09:19:16 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 18:24:26 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 16:48:45 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	*chrptr;
 
 	chrptr = (char *)s;
-	while (n && *chrptr != (char)c)
+	while (n && *chrptr != (char)c && *chrptr)
 	{
 		chrptr++;
 		n--;
