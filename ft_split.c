@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 13:53:55 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 13:54:35 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		len = 0;
 		while (*s != c && *s && len++)
 			s++;
-		arr[i++]ft_substr(s - len, 0, len);
+		arr[i++] = ft_substr(s - len, 0, len);
 	}
 	return (arr);
 }
