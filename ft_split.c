@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 15:57:02 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 15:59:30 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static	size_t	ft_str_count(char const *s, char c)
 static void	ft_free(char **arr, int i)
 {
 	while (i >= 0)
-		free(arr[i--];
+		free(arr[i--]);
 	free (arr);
 }
 
