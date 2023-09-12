@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 11:09:23 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:13:34 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	if (!*s)
-		str_cnt = 0;
+		return (NULL);
 	else
 		str_cnt = ft_str_count(s, c);
 	arr = (char **)malloc((str_cnt) * sizeof(char *));
@@ -73,18 +73,17 @@ char	**ft_split(char const *s, char c)
 	ft_substr_gen(arr, s, c);
 	return (arr);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
 	char	**tab;
 	int		i = 0;
 	int		j = 0;
-	tab = ft_split("  tripouille  42  ", ' ');
+	tab = ft_split("", 'z');
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
 		i++;
 	}
 }
- */
