@@ -6,19 +6,18 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 09:55:38 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 09:57:53 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int		i;
 	size_t	lensave;
 
-	
+
 	if (*little == '\0')
 		return ((char *)big);
 	while (len && *big != '\0')
@@ -37,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -48,3 +47,4 @@ int	main(void)
 
 	printf("%s", ft_strnstr(haystack, needle, -1));
 }
+ */
