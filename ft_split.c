@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 13:00:57 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 13:09:48 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 		ft_substr_gen(arr, s, c);
 	return (arr);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -87,3 +87,4 @@ int	main(void)
 	if (tab[0] == NULL)
 		printf("Is NULL");
 }
+ */
