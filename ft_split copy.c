@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 13:33:25 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 13:32:31 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static	size_t	ft_str_count(char const *s, char c)
 	}
 	return (arr_cnt);
 }
-/*
+
 static	void	ft_substr_gen(char **arr, char const *s, char c)
 {
 	unsigned int	i;
@@ -56,7 +56,7 @@ static	void	ft_substr_gen(char **arr, char const *s, char c)
 	}
 	arr[arr_cnt] = NULL;
 }
- */
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	str_cnt;
@@ -77,7 +77,8 @@ char	**ft_split(char const *s, char c)
 			len++;
 			s++;
 		}
-		ft_substr(arr, s - len, len);
+		ft_substr_gen(arr, s - len, len);
+	}
 	}
 	return (arr);
 }
