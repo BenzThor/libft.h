@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 18:14:49 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/06 15:49:09 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 10:04:16 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ptr[i] = c;
+		ptr[i] = (char)c;
 		i++;
 	}
 	return (ptr);

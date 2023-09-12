@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:46:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/11 18:07:59 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/12 10:03:07 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ static	size_t	cnt_num(long int n)
 	return (cnt);
 }
 
-static char	*ft_create_str(int cnt, int sign, long int n)
+static char	*ft_create_str(size_t cnt, size_t sign, long int n)
 {
 	int		i;
 	char	*str;
 
-	str = malloc(cnt + 1);
+	str = malloc(sizeof(char *) * (cnt + 1));
 	if (str == NULL)
 		return (NULL);
 	i = cnt;
@@ -73,10 +73,9 @@ char	*ft_itoa(int n)
 	}
 	return (str = ft_create_str(cnt, sign, nl));
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
 	printf("%s", ft_itoa(-2147483648));
 }
- */
