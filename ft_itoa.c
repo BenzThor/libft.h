@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:46:00 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 16:42:06 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/13 09:45:03 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	size_t	cnt_num(long int n)
 {

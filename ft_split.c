@@ -6,12 +6,11 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:51:44 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/13 09:38:56 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/13 09:47:10 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	size_t	ft_str_count(char const *s, char c)
 {
