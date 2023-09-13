@@ -6,7 +6,7 @@
 /*   By: tbenz <tbenz@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:30:42 by tbenz             #+#    #+#             */
-/*   Updated: 2023/09/12 09:58:54 by tbenz            ###   ########.fr       */
+/*   Updated: 2023/09/13 09:39:13 by tbenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int		i;
 	size_t	lensave;
-
 
 	if (*little == '\0')
 		return ((char *)big);
