@@ -14,7 +14,7 @@
 	<span> · </span>
 	<a href="#-introduction">Introduction</a>
 	<span> · </span>
-	<a href="#-project-structure">Project Structure</a>
+	<a href="#️-project-structure">Project Structure</a>
 	<span> · </span>
 	<a href="#-function-list">Function List</a>
 	<span> · </span>
@@ -26,7 +26,7 @@
 ## 📖 Content
 
 1. [Introduction](#-introduction)
-2. [Project Structure](#-project-structure)
+2. [Project Structure](##️-project-structure)
 3. [Functions List](#-functions-list)
    <details>
    <summary>Show/Hide Functions List</summary>
