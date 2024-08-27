@@ -18,7 +18,7 @@
 	<span> · </span>
 	<a href="#-function-list">Function List</a>
 	<span> · </span>
-	<a href="#-installation">Installation</a>
+	<a href="#️-installation">Installation</a>
 	<span> · </span>
 	<a href="#-usage">Usage</a>
 </h3>
@@ -41,7 +41,7 @@
    - [Linked List Functions](#linked-list-functions)
    </details>
 
-4. [Installation](#-installation)
+4. [Installation](#️-installation)
 5. [Usage](#-usage)
    <details>
    <summary>Show/Hide Usage</summary>
