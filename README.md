@@ -27,7 +27,7 @@
 
 1. [Introduction](#-introduction)
 2. [Project Structure](#️-project-structure)
-3. [Functions List](#-functions-list)
+3. [Functions List](#-function-list)
    <details>
    <summary>Show/Hide Functions List</summary>
 
