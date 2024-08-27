@@ -26,7 +26,7 @@
 ## 📖 Content
 
 1. [Introduction](#-introduction)
-2. [Project Structure](##️-project-structure)
+2. [Project Structure](#️-project-structure)
 3. [Functions List](#-functions-list)
    <details>
    <summary>Show/Hide Functions List</summary>
