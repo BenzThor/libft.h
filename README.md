@@ -161,7 +161,7 @@ To install and use the `libft` library, follow these steps:
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone git clone https://github.com/BenzThor/libft.h.git
+    git clone https://github.com/BenzThor/libft.h.git
     cd libft
     ```
 
