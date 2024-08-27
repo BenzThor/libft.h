@@ -14,20 +14,20 @@
 	<span> · </span>
 	<a href="#-introduction">Introduction</a>
 	<span> · </span>
-	<a href="#project-structure">Project Structure</a>
+	<a href="#-project-structure">Project Structure</a>
 	<span> · </span>
-	<a href="#function-list">Function List</a>
+	<a href="#-function-list">Function List</a>
 	<span> · </span>
-	<a href="#installation">Installation</a>
+	<a href="#-installation">Installation</a>
 	<span> · </span>
-	<a href="#usage">Usage</a>
+	<a href="#-usage">Usage</a>
 </h3>
 
 ## 📖 Content
 
-1. [Introduction](#introduction)
-2. [Project Structure](#project-structure)
-3. [Functions List](#functions-list)
+1. [Introduction](#-introduction)
+2. [Project Structure](#-project-structure)
+3. [Functions List](#-functions-list)
    <details>
    <summary>Show/Hide Functions List</summary>
 
@@ -41,8 +41,8 @@
    - [Linked List Functions](#linked-list-functions)
    </details>
 
-4. [Installation](#installation)
-5. [Usage](#usage)
+4. [Installation](#-installation)
+5. [Usage](#-usage)
    <details>
    <summary>Show/Hide Usage</summary>
 
