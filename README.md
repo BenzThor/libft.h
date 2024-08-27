@@ -23,7 +23,7 @@
 	<a href="#usage">Usage</a>
 </h3>
 
-## Content
+## 📖 Content
 
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -57,18 +57,18 @@
 	 - [Additional Notes](#additional-notes)
    </details>
 
-## Introduction
+## 🔭 Introduction
 
 **Libft** is a custom implementation of the C Standard Library functions. This project is part of the 42 curriculum and aims to help students become familiar with basic C programming and fundamental data structures.
 
-## Project Structure
+## 🗃️ Project Structure
 
 The project is structured into several categories of functions:
 - **Libc Functions**: Reimplementations of standard C library functions.
 - **Additional Functions**: Utility functions that provide common functionality missing from the C standard library.
 - **Bonus Functions**: Functions that handle linked lists.
 
-## Function List
+## 📋 Function List
 
 ### Table of Functions
 
@@ -178,7 +178,7 @@ The project is structured into several categories of functions:
 | [`ft_lstiter`](src/ft_lstiter.c)     | Iterates over the list and applies a function to each element.      |
 | [`ft_lstmap`](src/ft_lstmap.c)       | Applies a function to each element of the list and creates a new list with the results. |
 
-## Installation
+## 🛠️ Installation
 
 To install and use the `libft` library, follow these steps:
 
@@ -195,7 +195,7 @@ To install and use the `libft` library, follow these steps:
 
 3. The above command will generate a `libft.a` file, which is a static library that you can link to your C projects.
 
-## Usage
+## 💻 Usage
 
 ### General Usage
 
