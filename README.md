@@ -4,7 +4,10 @@
 
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
-3. [Function List](#function-list)
+3. [Functions List](#functions-list)
+   <details>
+   <summary>Show/Hide Functions List</summary>
+
    - [Character Check Functions](#character-check-functions)
    - [String Functions](#string-functions)
      - [String Length and Manipulation](#string-length-and-manipulation)
@@ -13,10 +16,15 @@
    - [Conversion Functions](#conversion-functions)
    - [Output Functions](#output-functions)
    - [Linked List Functions](#linked-list-functions)
+   </details>
+
 4. [Installation](#installation)
 5. [Usage](#usage)
+   <details>
+   <summary>Show/Hide Usage</summary>
+
    - [General Usage](#general-usage)
-   - [GCC Command Explanantion](#gcc-command-explanation)
+   - [GCC Command Explanation](#gcc-command-explanation)
      - [Command Breakdown](#command-breakdown)
 	 - [gcc](#gcc)
 	 - [Flags](#flags)
@@ -24,6 +32,7 @@
 	 - [Source Code File](#source-code-file)
 	 - [Library Directories and Linking](#library-directories-and-linking)
 	 - [Additional Notes](#additional-notes)
+   </details>
 
 ## Introduction
 
