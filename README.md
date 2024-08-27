@@ -10,9 +10,9 @@
 </p>
 
 <h3 align="center">
-	<a href="#content">Content</a>
+	<a href="#-content">Content</a>
 	<span> · </span>
-	<a href="#introduction">Introduction</a>
+	<a href="#-introduction">Introduction</a>
 	<span> · </span>
 	<a href="#project-structure">Project Structure</a>
 	<span> · </span>
