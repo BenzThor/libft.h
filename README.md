@@ -10,17 +10,17 @@
 </p>
 
 <h3 align="center">
-	<a href="#-content">Content</a>
+	<a href="#-content">📖 Content</a>
 	<span> · </span>
-	<a href="#-introduction">Introduction</a>
+	<a href="#-introduction">🔭 Introduction</a>
 	<span> · </span>
-	<a href="#️-project-structure">Project Structure</a>
+	<a href="#️-project-structure">🗃️ Project Structure</a>
 	<span> · </span>
-	<a href="#-function-list">Function List</a>
+	<a href="#-function-list">📋 Function List</a>
 	<span> · </span>
-	<a href="#️-installation">Installation</a>
+	<a href="#️-installation">🛠️ Installation</a>
 	<span> · </span>
-	<a href="#-usage">Usage</a>
+	<a href="#-usage">💻 Usage</a>
 </h3>
 
 ## 📖 Content
