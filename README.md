@@ -1,4 +1,27 @@
-# Libft: The 42 library for C projects 🇨📚
+<h1 align="center">
+  🇨📚 Libft: The 42 library for C projects
+</h1>
+
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/benzThor/libft.h?color=red" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/benzThor/libft.h?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/benzThor/libft.h?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/benzThor/libft.h?color=green" />
+</p>
+
+<h3 align="center">
+	<a href="#content">Content</a>
+	<span> · </span>
+	<a href="#introduction">Introduction</a>
+	<span> · </span>
+	<a href="#project-structure">Project Structure</a>
+	<span> · </span>
+	<a href="#function-list">Function List</a>
+	<span> · </span>
+	<a href="#installation">Installation</a>
+	<span> · </span>
+	<a href="#usage">Usage</a>
+</h3>
 
 ## Content
 
