@@ -12,21 +12,21 @@
 <h3 align="center">
 	<a href="#-content">📖 Content</a>
 	<span> · </span>
-	<a href="#-introduction">🔭 Introduction</a>
+	<a href="#-project-overview">📝 Project Overview</a>
 	<span> · </span>
-	<a href="#️-project-structure">🗃️ Project Structure</a>
+	<a href="#-project-structure">📂 Project Structure</a>
 	<span> · </span>
 	<a href="#-function-list">📋 Function List</a>
 	<span> · </span>
 	<a href="#️-installation">🛠️ Installation</a>
 	<span> · </span>
-	<a href="#-usage">💻 Usage</a>
+	<a href="#-usage">🚀 Usage</a>
 </h3>
 
 ## 📖 Content
 
-1. [Introduction](#-introduction)
-2. [Project Structure](#️-project-structure)
+1. [Project Overview](#-project-overview)
+2. [Project Structure](#-project-structure)
 3. [Functions List](#-function-list)
    <details>
    <summary>Show/Hide Functions List</summary>
@@ -57,11 +57,11 @@
 	 - [Additional Notes](#additional-notes)
    </details>
 
-## 🔭 Introduction
+## 📝 Project Overview
 
 **Libft** is a custom implementation of the C Standard Library functions. This project is part of the 42 curriculum and aims to help students become familiar with basic C programming and fundamental data structures.
 
-## 🗃️ Project Structure
+## 📂 Project Structure
 
 The project is structured into several categories of functions:
 - **Libc Functions**: Reimplementations of standard C library functions.
@@ -195,7 +195,7 @@ To install and use the `libft` library, follow these steps:
 
 3. The above command will generate a `libft.a` file, which is a static library that you can link to your C projects.
 
-## 💻 Usage
+## 🚀 Usage
 
 ### General Usage
 
